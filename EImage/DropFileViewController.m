@@ -92,9 +92,17 @@
     } completion:^(NSError *error, NSString *link, NSInteger index){
         dispatch_async(dispatch_get_main_queue(),^{
             [weakSelf endUpload];
+            [weakSelf writeToPasteBoard:link];
         });
     }];
     
+}
+
+- (BOOL) writeToPasteBoard:(NSString *)stringToWrite
+{
+    NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
+    [pasteBoard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+    return [pasteBoard setString:stringToWrite forType:NSStringPboardType];
 }
 
 - (void)startUpload
