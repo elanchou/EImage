@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DropFileViewController">
+            <connections>
+                <outlet property="dropView" destination="NiK-qC-b3t" id="QUA-2r-ZCa"/>
+                <outlet property="errorTextField" destination="1Pu-Vs-WtY" id="Jl5-xR-a3o"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="NiK-qC-b3t" customClass="DropView">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-Vs-WtY">
+                    <rect key="frame" x="18" y="85" width="164" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please drop one file" id="zpK-GM-b77">
+                        <font key="font" size="15" name="SFUIDisplay-Light"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NiK-qC-b3t" firstAttribute="height" secondItem="Hz6-mo-xeY" secondAttribute="height" id="505-YP-vhW"/>
+                <constraint firstItem="NiK-qC-b3t" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Yn2-Ud-G6X"/>
+                <constraint firstItem="NiK-qC-b3t" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="iTY-Os-O3p"/>
+                <constraint firstItem="NiK-qC-b3t" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kDn-pm-DqE"/>
+            </constraints>
+            <point key="canvasLocation" x="-33" y="79"/>
+        </customView>
+    </objects>
+</document>

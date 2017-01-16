@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DCC22E59473BDA0C88EFBF /* libPods-EImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E76B3F56D382CCFC48C4601A /* libPods-EImage.a */; };
 		EE383D841E2CC41D00EF6F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE383D831E2CC41D00EF6F41 /* AppDelegate.m */; };
 		EE383D871E2CC41D00EF6F41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE383D861E2CC41D00EF6F41 /* main.m */; };
 		EE383D891E2CC41D00EF6F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE383D881E2CC41D00EF6F41 /* Assets.xcassets */; };
 		EE383D8C1E2CC41D00EF6F41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE383D8A1E2CC41D00EF6F41 /* MainMenu.xib */; };
+		EE383D961E2CC77B00EF6F41 /* DropFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */; };
+		EE383D971E2CC77B00EF6F41 /* DropFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */; };
+		EEBF5ED91E2CC96A00907B31 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5ED81E2CC96A00907B31 /* DropView.m */; };
+		EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */; };
+		EEBF5EE01E2CDC2000907B31 /* PerferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */; };
+		EEBF5EE11E2CDC2000907B31 /* PerferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B64A4D682DA033CF5D619117 /* Pods-EImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-EImage/Pods-EImage.release.xcconfig"; sourceTree = "<group>"; };
+		E76B3F56D382CCFC48C4601A /* libPods-EImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE383D7F1E2CC41D00EF6F41 /* EImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE383D821E2CC41D00EF6F41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE383D831E2CC41D00EF6F41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -21,6 +30,17 @@
 		EE383D881E2CC41D00EF6F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE383D8B1E2CC41D00EF6F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EE383D8D1E2CC41D00EF6F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE383D931E2CC77B00EF6F41 /* DropFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropFileViewController.h; sourceTree = "<group>"; };
+		EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropFileViewController.m; sourceTree = "<group>"; };
+		EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropFileViewController.xib; sourceTree = "<group>"; };
+		EEBF5ED71E2CC96A00907B31 /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropView.h; sourceTree = "<group>"; };
+		EEBF5ED81E2CC96A00907B31 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
+		EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQiNiuUploadManager.h; sourceTree = "<group>"; };
+		EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQiNiuUploadManager.m; sourceTree = "<group>"; };
+		EEBF5EDD1E2CDC2000907B31 /* PerferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerferencesViewController.h; sourceTree = "<group>"; };
+		EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerferencesViewController.m; sourceTree = "<group>"; };
+		EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerferencesViewController.xib; sourceTree = "<group>"; };
+		FD5E343D7ED3A2C3D930F767 /* Pods-EImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EImage/Pods-EImage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DCC22E59473BDA0C88EFBF /* libPods-EImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D41A7211637ABC06CD0F7F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD5E343D7ED3A2C3D930F767 /* Pods-EImage.debug.xcconfig */,
+				B64A4D682DA033CF5D619117 /* Pods-EImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86680BBB573FF62DE2129C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E76B3F56D382CCFC48C4601A /* libPods-EImage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE383D761E2CC41C00EF6F41 = {
 			isa = PBXGroup;
 			children = (
 				EE383D811E2CC41D00EF6F41 /* EImage */,
 				EE383D801E2CC41D00EF6F41 /* Products */,
+				3D41A7211637ABC06CD0F7F3 /* Pods */,
+				86680BBB573FF62DE2129C26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +95,16 @@
 			children = (
 				EE383D821E2CC41D00EF6F41 /* AppDelegate.h */,
 				EE383D831E2CC41D00EF6F41 /* AppDelegate.m */,
+				EE383D931E2CC77B00EF6F41 /* DropFileViewController.h */,
+				EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */,
+				EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */,
+				EEBF5EDD1E2CDC2000907B31 /* PerferencesViewController.h */,
+				EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */,
+				EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */,
+				EEBF5ED71E2CC96A00907B31 /* DropView.h */,
+				EEBF5ED81E2CC96A00907B31 /* DropView.m */,
+				EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */,
+				EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */,
 				EE383D881E2CC41D00EF6F41 /* Assets.xcassets */,
 				EE383D8A1E2CC41D00EF6F41 /* MainMenu.xib */,
 				EE383D8D1E2CC41D00EF6F41 /* Info.plist */,
@@ -78,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE383D901E2CC41D00EF6F41 /* Build configuration list for PBXNativeTarget "EImage" */;
 			buildPhases = (
+				7B76C8C2D40B8013F6CCC1A8 /* [CP] Check Pods Manifest.lock */,
 				EE383D7B1E2CC41C00EF6F41 /* Sources */,
 				EE383D7C1E2CC41C00EF6F41 /* Frameworks */,
 				EE383D7D1E2CC41C00EF6F41 /* Resources */,
+				5A47BF021A9F4D0E36CA4B38 /* [CP] Embed Pods Frameworks */,
+				2618A49FB0F68D99E44FB0A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +183,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE383D971E2CC77B00EF6F41 /* DropFileViewController.xib in Resources */,
 				EE383D891E2CC41D00EF6F41 /* Assets.xcassets in Resources */,
 				EE383D8C1E2CC41D00EF6F41 /* MainMenu.xib in Resources */,
+				EEBF5EE11E2CDC2000907B31 /* PerferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2618A49FB0F68D99E44FB0A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EImage/Pods-EImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A47BF021A9F4D0E36CA4B38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EImage/Pods-EImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B76C8C2D40B8013F6CCC1A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE383D7B1E2CC41C00EF6F41 /* Sources */ = {
@@ -143,7 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE383D871E2CC41D00EF6F41 /* main.m in Sources */,
+				EEBF5ED91E2CC96A00907B31 /* DropView.m in Sources */,
+				EE383D961E2CC77B00EF6F41 /* DropFileViewController.m in Sources */,
 				EE383D841E2CC41D00EF6F41 /* AppDelegate.m in Sources */,
+				EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */,
+				EEBF5EE01E2CDC2000907B31 /* PerferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +357,7 @@
 		};
 		EE383D911E2CC41D00EF6F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5E343D7ED3A2C3D930F767 /* Pods-EImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -263,6 +371,7 @@
 		};
 		EE383D921E2CC41D00EF6F41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64A4D682DA033CF5D619117 /* Pods-EImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -293,6 +402,7 @@
 				EE383D921E2CC41D00EF6F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
