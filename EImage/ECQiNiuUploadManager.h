@@ -15,6 +15,10 @@ typedef void (^UploadAllTasksCompletion)();
 @interface ECQiNiuUploadManager : NSObject
 
 /**
+ *  域名
+ */
+@property (nonatomic, strong) NSString *domain;
+/**
  *  工作空间名称
  */
 @property (nonatomic, strong) NSString *scope;

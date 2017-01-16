@@ -10,11 +10,14 @@
 #import "DropView.h"
 #import <QiniuSDK.h>
 #import "ECQiNiuUploadManager.h"
+#import "PreferencesWindowController.h"
 
 @interface DropFileViewController ()
 
 @property (weak) IBOutlet NSTextField *errorTextField;
 @property (weak) IBOutlet DropView *dropView;
+
+@property (strong) PreferencesWindowController *preferencesWindowsController;
 
 @end
 
@@ -30,13 +33,38 @@
     _errorTextField.alphaValue = 0.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(multiFilesDrop) name:DropViewErrorMultiFilesNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotTheFilePath:) name:DropViewDidGotFileNotification object:nil];
-    [[ECQiNiuUploadManager sharedManager] registerWithScope:@"blog" accessKey:@"wPRgAg_Lr9WdzR66GWRMLohN7ujrsF18wGnNxPkS" secretKey:@"ztCAxQ-C6RvgjJ1JPKJMOZUPq__4dV8JIQicn1f0" liveTime:5];
-    [[ECQiNiuUploadManager sharedManager] createToken];
+}
+
+- (void)viewDidAppear
+{
+    [super viewDidAppear];
+    if ([self setup]){
+        
+    }
+}
+
+- (BOOL)setup
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"bucketName"]){
+        [[ECQiNiuUploadManager sharedManager] registerWithScope:[defaults objectForKey:@"bucketName"] accessKey:[defaults objectForKey:@"accessKey"] secretKey:[defaults objectForKey:@"secrectKey"] liveTime:5];
+        [ECQiNiuUploadManager sharedManager].domain = [defaults objectForKey:@"domain"];
+        [[ECQiNiuUploadManager sharedManager] createToken];
+        return YES;
+    }
+    return NO;
 }
 
 - (void)multiFilesDrop
 {
     _errorTextField.alphaValue = 1.0;
+}
+- (IBAction)onPreferenceBtn:(NSButton *)sender
+{
+    self.preferencesWindowsController = [[PreferencesWindowController alloc] initWithWindowNibName:@"PreferencesWindowController"];
+    [_preferencesWindowsController showWindow:self];
+    [NSApp activateIgnoringOtherApps:YES];
+    [_preferencesWindowsController.window makeKeyAndOrderFront:self];
 }
 
 - (void)gotTheFilePath:(NSNotification *)notification

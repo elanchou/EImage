@@ -14,10 +14,10 @@
 		EE383D8C1E2CC41D00EF6F41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE383D8A1E2CC41D00EF6F41 /* MainMenu.xib */; };
 		EE383D961E2CC77B00EF6F41 /* DropFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */; };
 		EE383D971E2CC77B00EF6F41 /* DropFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */; };
+		EE783ACE1E2CFF5F002F2901 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE783ACC1E2CFF5F002F2901 /* PreferencesWindowController.m */; };
+		EE783ACF1E2CFF5F002F2901 /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE783ACD1E2CFF5F002F2901 /* PreferencesWindowController.xib */; };
 		EEBF5ED91E2CC96A00907B31 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5ED81E2CC96A00907B31 /* DropView.m */; };
 		EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */; };
-		EEBF5EE01E2CDC2000907B31 /* PerferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */; };
-		EEBF5EE11E2CDC2000907B31 /* PerferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +33,13 @@
 		EE383D931E2CC77B00EF6F41 /* DropFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropFileViewController.h; sourceTree = "<group>"; };
 		EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropFileViewController.m; sourceTree = "<group>"; };
 		EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropFileViewController.xib; sourceTree = "<group>"; };
+		EE783ACB1E2CFF5F002F2901 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		EE783ACC1E2CFF5F002F2901 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		EE783ACD1E2CFF5F002F2901 /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 		EEBF5ED71E2CC96A00907B31 /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropView.h; sourceTree = "<group>"; };
 		EEBF5ED81E2CC96A00907B31 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
 		EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQiNiuUploadManager.h; sourceTree = "<group>"; };
 		EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQiNiuUploadManager.m; sourceTree = "<group>"; };
-		EEBF5EDD1E2CDC2000907B31 /* PerferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerferencesViewController.h; sourceTree = "<group>"; };
-		EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerferencesViewController.m; sourceTree = "<group>"; };
-		EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerferencesViewController.xib; sourceTree = "<group>"; };
 		FD5E343D7ED3A2C3D930F767 /* Pods-EImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EImage/Pods-EImage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,9 +98,9 @@
 				EE383D931E2CC77B00EF6F41 /* DropFileViewController.h */,
 				EE383D941E2CC77B00EF6F41 /* DropFileViewController.m */,
 				EE383D951E2CC77B00EF6F41 /* DropFileViewController.xib */,
-				EEBF5EDD1E2CDC2000907B31 /* PerferencesViewController.h */,
-				EEBF5EDE1E2CDC2000907B31 /* PerferencesViewController.m */,
-				EEBF5EDF1E2CDC2000907B31 /* PerferencesViewController.xib */,
+				EE783ACB1E2CFF5F002F2901 /* PreferencesWindowController.h */,
+				EE783ACC1E2CFF5F002F2901 /* PreferencesWindowController.m */,
+				EE783ACD1E2CFF5F002F2901 /* PreferencesWindowController.xib */,
 				EEBF5ED71E2CC96A00907B31 /* DropView.h */,
 				EEBF5ED81E2CC96A00907B31 /* DropView.m */,
 				EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */,
@@ -186,7 +186,7 @@
 				EE383D971E2CC77B00EF6F41 /* DropFileViewController.xib in Resources */,
 				EE383D891E2CC41D00EF6F41 /* Assets.xcassets in Resources */,
 				EE383D8C1E2CC41D00EF6F41 /* MainMenu.xib in Resources */,
-				EEBF5EE11E2CDC2000907B31 /* PerferencesViewController.xib in Resources */,
+				EE783ACF1E2CFF5F002F2901 /* PreferencesWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +248,9 @@
 				EE383D871E2CC41D00EF6F41 /* main.m in Sources */,
 				EEBF5ED91E2CC96A00907B31 /* DropView.m in Sources */,
 				EE383D961E2CC77B00EF6F41 /* DropFileViewController.m in Sources */,
+				EE783ACE1E2CFF5F002F2901 /* PreferencesWindowController.m in Sources */,
 				EE383D841E2CC41D00EF6F41 /* AppDelegate.m in Sources */,
 				EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */,
-				EEBF5EE01E2CDC2000907B31 /* PerferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

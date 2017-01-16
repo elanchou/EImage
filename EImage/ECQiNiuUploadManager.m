@@ -15,7 +15,6 @@
 #import "QiniuSDK.h"
 
 static NSInteger defaultLiveTime = 5;
-static NSString *QiNiuHost = @"host";
 
 @interface ECQiNiuUploadManager ()
 
@@ -114,7 +113,7 @@ static NSString *QiNiuHost = @"host";
                         completion(info.error, nil, self.index);
                     } else {
                         NSString *link =
-                        [NSString stringWithFormat:@"%@/%@", QiNiuHost, resp[@"key"]];
+                        [NSString stringWithFormat:@"%@/%@", _domain, resp[@"key"]];
                         completion(nil, link, self.index);
                     }
                 }

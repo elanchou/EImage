@@ -24,11 +24,12 @@
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:-2];
     if (_statusItem){
         NSButton *statusBtn = _statusItem.button;
-        statusBtn.image = [NSImage imageNamed:@"StatusBarButtonImage"];
+        statusBtn.image = [NSImage imageNamed:@"menu"];
         statusBtn.action = @selector(onStatusBarBtn:);
     }
     _popover = [[NSPopover alloc] init];
     _popover.contentViewController = [[DropFileViewController alloc] initWithNibName:@"DropFileViewController" bundle:nil];
+    _popover.behavior = NSPopoverBehaviorTransient;
 }
 
 - (void)onStatusBarBtn:(id)sender

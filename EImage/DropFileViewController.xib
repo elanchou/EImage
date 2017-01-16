@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DropFileViewController">
@@ -19,26 +20,75 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="NiK-qC-b3t" customClass="DropView">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                </customView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-Vs-WtY">
-                    <rect key="frame" x="18" y="85" width="164" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please drop one file" id="zpK-GM-b77">
-                        <font key="font" size="15" name="SFUIDisplay-Light"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-GC-tnn">
+                    <rect key="frame" x="46" y="20" width="107" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="103" id="0tS-zL-6Qy"/>
+                        <constraint firstAttribute="height" constant="17" id="cAl-7Y-7eG"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" title="Drag Image Here" id="eSB-dv-Bob">
+                        <font key="font" metaFont="systemLight" size="13"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26Q-tC-jnh">
+                    <rect key="frame" x="60" y="60" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="UZC-Sm-W1C"/>
+                        <constraint firstAttribute="width" constant="80" id="X5I-wR-SMl"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="upload" id="6q3-jU-cuo"/>
+                </imageView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="NiK-qC-b3t" customClass="DropView">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <subviews>
+                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-Vs-WtY">
+                            <rect key="frame" x="35" y="89" width="131" height="23"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please drop one file" id="zpK-GM-b77">
+                                <font key="font" size="15" name="SFUIDisplay-Light"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GTV-vw-d8c">
+                            <rect key="frame" x="173" y="2" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="DJe-fk-BRM"/>
+                                <constraint firstAttribute="height" constant="25" id="oyi-ij-ph2"/>
+                            </constraints>
+                            <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e4L-Rt-s7t">
+                                <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onPreferenceBtn:" target="-2" id="3uL-hh-9YY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerX" secondItem="NiK-qC-b3t" secondAttribute="centerX" id="FkD-fc-PHm"/>
+                        <constraint firstAttribute="bottom" secondItem="GTV-vw-d8c" secondAttribute="bottom" constant="2" id="Muf-1h-uYh"/>
+                        <constraint firstAttribute="trailing" secondItem="GTV-vw-d8c" secondAttribute="trailing" constant="2" id="ZN6-h8-0lQ"/>
+                        <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerY" secondItem="NiK-qC-b3t" secondAttribute="centerY" id="kxU-G4-Zri"/>
+                    </constraints>
+                </customView>
             </subviews>
             <constraints>
+                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="0ab-rd-m1S"/>
+                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="3p7-0O-QYH"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="height" secondItem="Hz6-mo-xeY" secondAttribute="height" id="505-YP-vhW"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Yn2-Ud-G6X"/>
+                <constraint firstItem="VuN-GC-tnn" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="aSO-X0-dz7"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="iTY-Os-O3p"/>
+                <constraint firstAttribute="bottom" secondItem="VuN-GC-tnn" secondAttribute="bottom" constant="20" id="jH1-aJ-uo1"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kDn-pm-DqE"/>
             </constraints>
             <point key="canvasLocation" x="-33" y="79"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="upload" width="60" height="52"/>
+    </resources>
 </document>

@@ -1,5 +1,5 @@
 //
-//  PerferencesViewController.h
+//  PreferencesWindowController.h
 //  EImage
 //
 //  Created by ELANCHOU on 1/16/17.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PerferencesViewController : NSViewController
+@interface PreferencesWindowController : NSWindowController
 
 @end
