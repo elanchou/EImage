@@ -9,8 +9,12 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DropFileViewController">
             <connections>
+                <outlet property="dragImageView" destination="26Q-tC-jnh" id="Yx3-6G-mBf"/>
+                <outlet property="dragLabel" destination="VuN-GC-tnn" id="M5U-Yk-Aak"/>
                 <outlet property="dropView" destination="NiK-qC-b3t" id="QUA-2r-ZCa"/>
                 <outlet property="errorTextField" destination="1Pu-Vs-WtY" id="Jl5-xR-a3o"/>
+                <outlet property="progressLabel" destination="yFm-4D-rzh" id="GhC-Fx-2Sq"/>
+                <outlet property="progressView" destination="7qL-oa-6W8" id="QDt-gT-ehi"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -32,6 +36,29 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="7qL-oa-6W8" customClass="ProgressView">
+                    <rect key="frame" x="20" y="20" width="160" height="160"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yFm-4D-rzh">
+                            <rect key="frame" x="49" y="67" width="61" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="4uZ-Mb-LPE"/>
+                                <constraint firstAttribute="height" constant="26" id="Fhp-QW-UfF"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2%" id="RAV-Wj-irr">
+                                <font key="font" metaFont="system" size="15"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="C9Y-Qi-zjr"/>
+                        <constraint firstItem="yFm-4D-rzh" firstAttribute="centerY" secondItem="7qL-oa-6W8" secondAttribute="centerY" id="Vtf-mL-4tI"/>
+                        <constraint firstAttribute="width" constant="160" id="fK1-mE-6JC"/>
+                        <constraint firstItem="yFm-4D-rzh" firstAttribute="centerX" secondItem="7qL-oa-6W8" secondAttribute="centerX" id="rYL-Kq-fBc"/>
+                    </constraints>
+                </customView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26Q-tC-jnh">
                     <rect key="frame" x="60" y="60" width="80" height="80"/>
                     <constraints>
@@ -78,13 +105,15 @@
                 <constraint firstItem="26Q-tC-jnh" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="0ab-rd-m1S"/>
                 <constraint firstItem="26Q-tC-jnh" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="3p7-0O-QYH"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="height" secondItem="Hz6-mo-xeY" secondAttribute="height" id="505-YP-vhW"/>
+                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="NJU-4i-PmQ"/>
+                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="OZ7-Vo-EKM"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Yn2-Ud-G6X"/>
                 <constraint firstItem="VuN-GC-tnn" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="aSO-X0-dz7"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="iTY-Os-O3p"/>
                 <constraint firstAttribute="bottom" secondItem="VuN-GC-tnn" secondAttribute="bottom" constant="20" id="jH1-aJ-uo1"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kDn-pm-DqE"/>
             </constraints>
-            <point key="canvasLocation" x="-33" y="79"/>
+            <point key="canvasLocation" x="-402" y="0.0"/>
         </customView>
     </objects>
     <resources>

@@ -11,11 +11,19 @@
 #import <QiniuSDK.h>
 #import "ECQiNiuUploadManager.h"
 #import "PreferencesWindowController.h"
+#import "ProgressView.h"
 
 @interface DropFileViewController ()
 
-@property (weak) IBOutlet NSTextField *errorTextField;
 @property (weak) IBOutlet DropView *dropView;
+
+@property (weak) IBOutlet NSTextField *errorTextField;
+
+@property (weak) IBOutlet ProgressView *progressView;
+@property (weak) IBOutlet NSTextField *progressLabel;
+
+@property (weak) IBOutlet NSTextField *dragLabel;
+@property (weak) IBOutlet NSImageView *dragImageView;
 
 @property (strong) PreferencesWindowController *preferencesWindowsController;
 
@@ -33,6 +41,7 @@
     _errorTextField.alphaValue = 0.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(multiFilesDrop) name:DropViewErrorMultiFilesNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotTheFilePath:) name:DropViewDidGotFileNotification object:nil];
+    [self endUpload];
 }
 
 - (void)viewDidAppear
@@ -57,8 +66,9 @@
 
 - (void)multiFilesDrop
 {
-    _errorTextField.alphaValue = 1.0;
+    _errorTextField.hidden = NO;
 }
+
 - (IBAction)onPreferenceBtn:(NSButton *)sender
 {
     self.preferencesWindowsController = [[PreferencesWindowController alloc] initWithWindowNibName:@"PreferencesWindowController"];
@@ -70,13 +80,35 @@
 - (void)gotTheFilePath:(NSNotification *)notification
 {
     NSString *file = notification.object;
+    __weak typeof(self) weakSelf = self;
     [[ECQiNiuUploadManager sharedManager] uploadData:[self readDataFromFileAtURL:[NSURL URLWithString:file]] progress:^(float progress){
-        NSLog(@"progress:%f",progress);
+        NSLog(@"%.2f",progress);
+        dispatch_async(dispatch_get_main_queue(),^{
+            [weakSelf startUpload];
+            weakSelf.progressLabel.stringValue = [NSString stringWithFormat:@"%.2f%%",progress * 100];
+            weakSelf.progressView.progress = progress;
+            [weakSelf.progressView setNeedsDisplay:YES];
+        });
     } completion:^(NSError *error, NSString *link, NSInteger index){
-        NSLog(@"error:%@",error);
-        NSLog(@"link:%@",link);
+        dispatch_async(dispatch_get_main_queue(),^{
+            [weakSelf endUpload];
+        });
     }];
     
+}
+
+- (void)startUpload
+{
+    _progressView.hidden = NO;
+    _dragLabel.hidden = YES;
+    _dragImageView.hidden = YES;
+}
+
+- (void)endUpload
+{
+    _progressView.hidden = YES;
+    _dragLabel.hidden = NO;
+    _dragImageView.hidden = NO;
 }
 
 - (NSData*)readDataFromFileAtURL:(NSURL*)anURL {

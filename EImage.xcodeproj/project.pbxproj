@@ -18,6 +18,7 @@
 		EE783ACF1E2CFF5F002F2901 /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE783ACD1E2CFF5F002F2901 /* PreferencesWindowController.xib */; };
 		EEBF5ED91E2CC96A00907B31 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5ED81E2CC96A00907B31 /* DropView.m */; };
 		EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */; };
+		EEF0F36A1E2D1E890030727F /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0F3691E2D1E890030727F /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		EEBF5ED81E2CC96A00907B31 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
 		EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECQiNiuUploadManager.h; sourceTree = "<group>"; };
 		EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECQiNiuUploadManager.m; sourceTree = "<group>"; };
+		EEF0F3681E2D1E890030727F /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		EEF0F3691E2D1E890030727F /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		FD5E343D7ED3A2C3D930F767 /* Pods-EImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EImage/Pods-EImage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +106,8 @@
 				EE783ACD1E2CFF5F002F2901 /* PreferencesWindowController.xib */,
 				EEBF5ED71E2CC96A00907B31 /* DropView.h */,
 				EEBF5ED81E2CC96A00907B31 /* DropView.m */,
+				EEF0F3681E2D1E890030727F /* ProgressView.h */,
+				EEF0F3691E2D1E890030727F /* ProgressView.m */,
 				EEBF5EDA1E2CDAE300907B31 /* ECQiNiuUploadManager.h */,
 				EEBF5EDB1E2CDAE300907B31 /* ECQiNiuUploadManager.m */,
 				EE383D881E2CC41D00EF6F41 /* Assets.xcassets */,
@@ -250,6 +255,7 @@
 				EE383D961E2CC77B00EF6F41 /* DropFileViewController.m in Sources */,
 				EE783ACE1E2CFF5F002F2901 /* PreferencesWindowController.m in Sources */,
 				EE383D841E2CC41D00EF6F41 /* AppDelegate.m in Sources */,
+				EEF0F36A1E2D1E890030727F /* ProgressView.m in Sources */,
 				EEBF5EDC1E2CDAE300907B31 /* ECQiNiuUploadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
