@@ -9,6 +9,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DropFileViewController">
             <connections>
+                <outlet property="changeToWindowButton" destination="Fjl-1X-koH" id="diI-Hg-s1k"/>
                 <outlet property="dragImageView" destination="26Q-tC-jnh" id="Yx3-6G-mBf"/>
                 <outlet property="dragLabel" destination="VuN-GC-tnn" id="M5U-Yk-Aak"/>
                 <outlet property="dropView" destination="NiK-qC-b3t" id="QUA-2r-ZCa"/>
@@ -92,11 +93,27 @@
                                 <action selector="onPreferenceBtn:" target="-2" id="3uL-hh-9YY"/>
                             </connections>
                         </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-1X-koH">
+                            <rect key="frame" x="91" y="162" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="UNd-CV-Bkb"/>
+                                <constraint firstAttribute="height" constant="18" id="eTi-Ae-WMC"/>
+                            </constraints>
+                            <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="VbV-0j-a0K">
+                                <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onChangeBtn:" target="-2" id="DFB-qT-a5q"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="Fjl-1X-koH" firstAttribute="top" secondItem="NiK-qC-b3t" secondAttribute="top" constant="20" id="7B8-G6-XcZ"/>
                         <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerX" secondItem="NiK-qC-b3t" secondAttribute="centerX" id="FkD-fc-PHm"/>
                         <constraint firstAttribute="bottom" secondItem="GTV-vw-d8c" secondAttribute="bottom" constant="2" id="Muf-1h-uYh"/>
                         <constraint firstAttribute="trailing" secondItem="GTV-vw-d8c" secondAttribute="trailing" constant="2" id="ZN6-h8-0lQ"/>
+                        <constraint firstItem="Fjl-1X-koH" firstAttribute="centerX" secondItem="NiK-qC-b3t" secondAttribute="centerX" id="a1q-Gn-KVQ"/>
                         <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerY" secondItem="NiK-qC-b3t" secondAttribute="centerY" id="kxU-G4-Zri"/>
                     </constraints>
                 </customView>

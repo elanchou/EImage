@@ -13,6 +13,8 @@
 #import "PreferencesWindowController.h"
 #import "ProgressView.h"
 
+NSString *const DropFileViewControllerModeChangeNotification = @"DropFileViewControllerModeChangeNotification";
+
 @interface DropFileViewController ()
 
 @property (weak) IBOutlet DropView *dropView;
@@ -26,10 +28,14 @@
 @property (weak) IBOutlet NSImageView *dragImageView;
 
 @property (strong) PreferencesWindowController *preferencesWindowsController;
+@property (strong) NSWindowController *windowController;
+@property (weak) IBOutlet NSButton *changeToWindowButton;
 
 @end
 
-@implementation DropFileViewController
+@implementation DropFileViewController{
+    BOOL _isInWindowMode;
+}
 
 - (void)dealloc
 {
@@ -39,14 +45,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _errorTextField.alphaValue = 0.0;
+    _dragLabel.alphaValue = 0.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(multiFilesDrop) name:DropViewErrorMultiFilesNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotTheFilePath:) name:DropViewDidGotFileNotification object:nil];
     [self endUpload];
+    _isInWindowMode = NO;
 }
 
 - (void)viewDidAppear
 {
     [super viewDidAppear];
+//    if (_dragLabel.alphaValue == 0.0){
+//        _dragLabel.alphaValue = 1.0;
+//    }
+//    [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
+//        context.duration = 3.0;
+//        _dragLabel.alphaValue = 0.0;
+//    } completionHandler:^{
+//        
+//    }];
     if ([self setup]){
         
     }
@@ -76,13 +93,17 @@
     [NSApp activateIgnoringOtherApps:YES];
     [_preferencesWindowsController.window makeKeyAndOrderFront:self];
 }
+- (IBAction)onChangeBtn:(NSButton *)sender
+{
+    [self removeFromParentViewController];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DropFileViewControllerModeChangeNotification object:nil];
+}
 
 - (void)gotTheFilePath:(NSNotification *)notification
 {
     NSString *file = notification.object;
     __weak typeof(self) weakSelf = self;
     [[ECQiNiuUploadManager sharedManager] uploadData:[self readDataFromFileAtURL:[NSURL URLWithString:file]] progress:^(float progress){
-        NSLog(@"%.2f",progress);
         dispatch_async(dispatch_get_main_queue(),^{
             [weakSelf startUpload];
             weakSelf.progressLabel.stringValue = [NSString stringWithFormat:@"%.2f%%",progress * 100];

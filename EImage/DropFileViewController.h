@@ -10,4 +10,6 @@
 
 @interface DropFileViewController : NSViewController
 
+extern NSString *const DropFileViewControllerModeChangeNotification;
+
 @end
