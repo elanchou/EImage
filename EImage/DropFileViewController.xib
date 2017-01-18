@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-GC-tnn">
-                    <rect key="frame" x="46" y="20" width="107" height="17"/>
+                    <rect key="frame" x="46" y="30" width="107" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="103" id="0tS-zL-6Qy"/>
                         <constraint firstAttribute="height" constant="17" id="cAl-7Y-7eG"/>
@@ -68,73 +68,69 @@
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="upload" id="6q3-jU-cuo"/>
                 </imageView>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="NiK-qC-b3t" customClass="DropView">
+                <customView appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="NiK-qC-b3t" customClass="DropView">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                    <subviews>
-                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-Vs-WtY">
-                            <rect key="frame" x="35" y="89" width="131" height="23"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please drop one file" id="zpK-GM-b77">
-                                <font key="font" size="15" name="SFUIDisplay-Light"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
-                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GTV-vw-d8c">
-                            <rect key="frame" x="173" y="2" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="DJe-fk-BRM"/>
-                                <constraint firstAttribute="height" constant="25" id="oyi-ij-ph2"/>
-                            </constraints>
-                            <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e4L-Rt-s7t">
-                                <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="onPreferenceBtn:" target="-2" id="3uL-hh-9YY"/>
-                            </connections>
-                        </button>
-                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-1X-koH">
-                            <rect key="frame" x="91" y="162" width="18" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="18" id="UNd-CV-Bkb"/>
-                                <constraint firstAttribute="height" constant="18" id="eTi-Ae-WMC"/>
-                            </constraints>
-                            <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="VbV-0j-a0K">
-                                <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="onChangeBtn:" target="-2" id="DFB-qT-a5q"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="Fjl-1X-koH" firstAttribute="top" secondItem="NiK-qC-b3t" secondAttribute="top" constant="20" id="7B8-G6-XcZ"/>
-                        <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerX" secondItem="NiK-qC-b3t" secondAttribute="centerX" id="FkD-fc-PHm"/>
-                        <constraint firstAttribute="bottom" secondItem="GTV-vw-d8c" secondAttribute="bottom" constant="2" id="Muf-1h-uYh"/>
-                        <constraint firstAttribute="trailing" secondItem="GTV-vw-d8c" secondAttribute="trailing" constant="2" id="ZN6-h8-0lQ"/>
-                        <constraint firstItem="Fjl-1X-koH" firstAttribute="centerX" secondItem="NiK-qC-b3t" secondAttribute="centerX" id="a1q-Gn-KVQ"/>
-                        <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerY" secondItem="NiK-qC-b3t" secondAttribute="centerY" id="kxU-G4-Zri"/>
-                    </constraints>
                 </customView>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-ol-Jkv">
+                    <rect key="frame" x="182" y="4" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="dpp-Mj-92P"/>
+                        <constraint firstAttribute="width" constant="14" id="m3B-s7-pEt"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aNN-ED-TaI">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onPreferenceBtn:" target="-2" id="Dhv-bf-R5R"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-1X-koH">
+                    <rect key="frame" x="91" y="172" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="UNd-CV-Bkb"/>
+                        <constraint firstAttribute="height" constant="18" id="eTi-Ae-WMC"/>
+                    </constraints>
+                    <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="VbV-0j-a0K">
+                        <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onChangeBtn:" target="-2" id="DFB-qT-a5q"/>
+                    </connections>
+                </button>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-Vs-WtY">
+                    <rect key="frame" x="28" y="91" width="143" height="19"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please drop one file" id="zpK-GM-b77">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="0ab-rd-m1S"/>
-                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="3p7-0O-QYH"/>
+                <constraint firstAttribute="bottom" secondItem="Hyh-ol-Jkv" secondAttribute="bottom" constant="4" id="2C1-Ko-5oz"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="height" secondItem="Hz6-mo-xeY" secondAttribute="height" id="505-YP-vhW"/>
-                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="NJU-4i-PmQ"/>
-                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="OZ7-Vo-EKM"/>
+                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="7wc-4f-inh"/>
+                <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Dzr-pN-11Z"/>
+                <constraint firstItem="Fjl-1X-koH" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="IGA-2z-MCt"/>
+                <constraint firstItem="1Pu-Vs-WtY" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Jcg-8I-gf6"/>
+                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Lv0-TV-g3L"/>
+                <constraint firstAttribute="bottom" secondItem="VuN-GC-tnn" secondAttribute="bottom" constant="30" id="VO1-dl-Vgv"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Yn2-Ud-G6X"/>
-                <constraint firstItem="VuN-GC-tnn" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="aSO-X0-dz7"/>
+                <constraint firstItem="Fjl-1X-koH" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="b3e-E9-S8L"/>
+                <constraint firstItem="VuN-GC-tnn" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="hRG-I7-aHa"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="iTY-Os-O3p"/>
-                <constraint firstAttribute="bottom" secondItem="VuN-GC-tnn" secondAttribute="bottom" constant="20" id="jH1-aJ-uo1"/>
                 <constraint firstItem="NiK-qC-b3t" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="kDn-pm-DqE"/>
+                <constraint firstAttribute="trailing" secondItem="Hyh-ol-Jkv" secondAttribute="trailing" constant="4" id="kYL-C1-WwY"/>
+                <constraint firstItem="26Q-tC-jnh" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="mq8-0G-ys9"/>
+                <constraint firstItem="7qL-oa-6W8" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="qv4-e8-9EK"/>
             </constraints>
             <point key="canvasLocation" x="-402" y="0.0"/>
         </customView>
     </objects>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="settings" width="20" height="20"/>
         <image name="upload" width="60" height="52"/>
     </resources>
 </document>

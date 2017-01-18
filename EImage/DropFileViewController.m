@@ -140,7 +140,8 @@ NSString *const DropFileViewControllerModeChangeNotification = @"DropFileViewCon
     _dragImageView.hidden = NO;
 }
 
-- (NSData*)readDataFromFileAtURL:(NSURL*)anURL {
+- (NSData*)readDataFromFileAtURL:(NSURL*)anURL
+{
     NSFileHandle* aHandle = [NSFileHandle fileHandleForReadingFromURL:anURL error:nil];
     NSData* fileContents = nil;
     if (aHandle)

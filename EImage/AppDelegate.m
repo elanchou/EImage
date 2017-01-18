@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DropFileViewController.h"
+#import "NSView+VisualEffect.h"
 
 @interface AppDelegate ()
 
@@ -47,6 +48,7 @@
     if (_isWindowMode){
         _windowController.window.contentViewController = nil;
         _popover.contentViewController = _dropVC;
+        [_dropVC.view removeVibrancyView];
         [self.windowController close];
         _statusItem.button.action = @selector(onStatusBarBtn:);
         [self showPopover];
@@ -56,7 +58,12 @@
         [window setFrame:_dropVC.view.window.frame display:YES];
         _popover.contentViewController = nil;
         window.contentViewController = _dropVC;
+        [_dropVC.view insertVibrancyViewBlendingMode:NSVisualEffectBlendingModeBehindWindow];
         [window setLevel:NSStatusWindowLevel];
+        window.titlebarAppearsTransparent = true;
+        window.titleVisibility = YES;
+        window.title = @"EImage";
+        window.styleMask |= NSWindowStyleMaskClosable | NSFullSizeContentViewWindowMask;
         self.windowController = [[NSWindowController alloc] initWithWindow:window];
         [self.windowController showWindow:self];
         [NSApp activateIgnoringOtherApps:YES];

@@ -8,8 +8,6 @@
 
 #import "ProgressView.h"
 
-#define kAlphaWhiteColor [NSColor colorWithWhite:1.0 alpha:0.6]
-
 @interface ProgressView()
 
 
@@ -39,7 +37,7 @@
                                  startAngle: 0
                                    endAngle: 360 * self.progress];
     
-    [kAlphaWhiteColor set];
+    [[NSColor controlTextColor] set];
     [bezierPath stroke];
     
 }
